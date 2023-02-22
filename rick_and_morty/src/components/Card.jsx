@@ -1,9 +1,9 @@
 import s from "./card.module.css"
 export default function Card(props) {
    return (
-      <div>
+      <div className={s.cartas}>
           <button className={s.xbutton} onClick={props.onClose}>X
-          <span>Al hacer click aqui eliminara el personaje</span>
+          <span>Cerrar la tarjeta del personaje</span>
           </button>
          <h2>{props.name}</h2>
          <h2>{props.species}</h2>

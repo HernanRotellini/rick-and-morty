@@ -1,0 +1,45 @@
+
+.cartas{
+    display: inline-block;
+    text-align: center;
+}
+.xbutton {
+    background-color: red;
+    height: 30px;
+    width: 30px;
+   
+}
+.xbutton:hover {
+    height: 50px;
+    width: 50px;
+
+}
+div{
+    background-color: black;
+}
+h2{
+   
+    font-size: 25px;
+    color: white;
+
+}
+img:hover {
+   height: 400px;
+   width: 400px;
+   
+}
+span{
+    position: relative;
+    display: none;
+}
+.xbutton:hover span{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    
+    text-align: center;
+}

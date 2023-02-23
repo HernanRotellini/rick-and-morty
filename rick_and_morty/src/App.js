@@ -35,14 +35,13 @@ function App() {
        });
  }
   return (
-   <div>
+   <div class="App">
     <Nav onSearch={onSearch}/>
     <Routes>
     <Route exact path="/about" element={<About/>} />
-    
+    <Route class="grid" exact path="/home" element={<Cards characters={characters} onClose={onClose} />}>
       
-      <Route exact path="/home" element={<Cards characters={characters} onClose={onClose} />} />
-      
+      </Route>
       <Route path="/detail/:detailId" element={<Detail/>} />
 
       </Routes>

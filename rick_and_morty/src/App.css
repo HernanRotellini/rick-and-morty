@@ -1,3 +1,9 @@
 .App {
    text-align: center;
+   justify-content: center;
+   background-color: black;
+}
+.grid{
+   display: grid;
+   grid-template-columns: auto auto auto auto;
 }

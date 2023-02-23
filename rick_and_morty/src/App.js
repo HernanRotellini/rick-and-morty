@@ -3,15 +3,17 @@ import './App.css';
 import Nav from './components/Nav';
 import Cards from './components/Cards';
 
+const URL = "https://be-a-rym.up.railway.app/api"
+const APIKEY= "3681102e3393.a2e00517a5401fef1d76"
 function App() {
   const [characters, setCharacters] = useState([]);
 
-  
+  //https://be-a-rym.up.railway.app/api/character/162?key=3681102e3393.a2e00517a5401fef1d76
   const onClose = (id) => {
     setCharacters(characters.filter((c) => c.id !== id));
   }
   function onSearch(character) {
-    fetch(`https://rickandmortyapi.com/api/character/${character.id}`)
+    fetch(`${URL}/character${character.id}?key=${APIKEY}`)
        .then((response) => response.json())
        .then((data) => {
         if (data.id) {

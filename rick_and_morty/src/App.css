@@ -1,9 +1,32 @@
+
 .App {
+   background-image: url("https://i.postimg.cc/qRK08FB2/R-M-fondo.jpg");
+   background-Size: cover;
+   background-position: center;
    text-align: center;
-   justify-content: center;
-   background-color: black;
+   background-repeat: no-repeat;
+   height: 100vh;
+
+   
 }
 .grid{
    display: grid;
    grid-template-columns: auto auto auto auto;
 }
+.form{
+   font-size: 25px;
+   color: rgb(236, 176, 35);
+   justify-content: center;
+   text-align: center;
+}
+.form h1{
+   font-size: 55px;
+   color: rgb(236, 176, 35);
+   justify-content: center;
+   text-align: center;
+}
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual ancho */
+   grid-auto-rows: minmax(100px, auto); /* alto mínimo de 100px y ajuste automático al contenido */
+ }

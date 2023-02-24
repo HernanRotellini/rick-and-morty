@@ -1,9 +1,14 @@
 
 .cartas{
-  display: inline-block
+  
+  display: inline-grid;
+  
+   /* 4 columnas de igual ancho */
+   
 }
 .xbutton {
-    background-color: red;
+   align-items: center;
+    background-color: rgb(248, 6, 79);
     height: 30px;
     width: 30px;
    
@@ -13,13 +18,12 @@
     width: 50px;
 
 }
-div{
-    background-color: black;
-}
+
 h2{
-   
     font-size: 25px;
-    color: white;
+    color: rgb(236, 176, 35);
+    justify-content: center;
+    text-align: center;
 
 }
 img{
@@ -38,7 +42,7 @@ span{
 .xbutton:hover span{
     position: absolute;
     display: inline-block;
-    color: white;
+    
     font-size: 18px;
     padding-left: 20px;
     padding-bottom: 5px;
@@ -46,3 +50,8 @@ span{
     
     text-align: center;
 }
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,10 +1,14 @@
 
 .cartas{
-    display: inline-block;
-    text-align: center;
+  
+  display: inline-grid;
+  
+   /* 4 columnas de igual ancho */
+   
 }
 .xbutton {
-    background-color: red;
+   align-items: center;
+    background-color: rgb(248, 6, 79);
     height: 30px;
     width: 30px;
    
@@ -14,18 +18,21 @@
     width: 50px;
 
 }
-div{
-    background-color: black;
-}
+
 h2{
-   
     font-size: 25px;
-    color: white;
+    color: rgb(236, 176, 35);
+    justify-content: center;
+    text-align: center;
 
 }
+img{
+    height: 150px;
+    width: 150px;
+}
 img:hover {
-   height: 400px;
-   width: 400px;
+   height: 250px;
+   width: 250px;
    
 }
 span{
@@ -35,7 +42,7 @@ span{
 .xbutton:hover span{
     position: absolute;
     display: inline-block;
-    color: white;
+    
     font-size: 18px;
     padding-left: 20px;
     padding-bottom: 5px;
@@ -43,3 +50,8 @@ span{
     
     text-align: center;
 }
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

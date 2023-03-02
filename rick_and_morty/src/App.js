@@ -8,6 +8,7 @@ import Detail from './components/Detail';
 import Form from './components/Form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import Favoritos from './components/Favorites';
 
 const URL = "https://be-a-rym.up.railway.app/api"
 const APIKEY= "3681102e3393.a2e00517a5401fef1d76"
@@ -54,21 +55,21 @@ const password = 'Admin123';
  if (location.pathname === '/') {
  return (
  <div className="App form">
-  <h1>Bienvenido al Mundo de Rick and Morty</h1>
+  <h1>Bienvenido al Mundo de Rick & Morty</h1>
   <Form login={login}/>
   
  </div>)
 }
   return (
    <div className="App">
-    <Nav onSearch={onSearch}/>
+    <Nav  onSearch={onSearch}/>
    
   <Routes>
 
 <Route exact path="/about" element={<About/>} />
-<Route className="grid-container" path="/home" element={<Cards characters={characters} onClose={onClose} />}></Route>
-<Route path="/detail/:detailId" element={<Detail/>} />
-
+<Route className="carta" path="/home" element={<Cards characters={characters} onClose={onClose} />}></Route>
+<Route className="detail" path="/detail/:detailId" element={<Detail/>} />
+<Route path='/favorites' element={<Favoritos />}/>
  </Routes>
     
       

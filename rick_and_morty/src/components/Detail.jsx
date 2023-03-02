@@ -1,3 +1,4 @@
+import './detail.modules.css'
 import { useParams,useNavigate} from "react-router-dom";
 
 import React from "react"
@@ -26,16 +27,29 @@ React.useEffect(() => {
     return setChar({});
   }, [detailId]);
 
-return (<div>
+return (
+  <div className='fondo'>
     <button onClick={volver}>Volver</button>
-    <h2>{char.name}</h2>
- 
- <h2>{char.species}</h2>
- <h2>{char.gender}</h2>
- <h2>{char.status}</h2>
- {char.origin && <h2>{char.origin.name}</h2>}
- <img src={char.image} alt="" /> 
-</div>)
+<div className="detalle">
+  
 
+<br /><br />
+<img className='nohover' src={char.image} alt="" />
+<div className='datos'>
+ 
+
+<h2>Nombre: {char.name}</h2>
+ 
+<h2>Especie: {char.species}</h2>
+<h2>Genero: {char.gender}</h2>
+<h2>Estado: {char.status}</h2>
+{char.origin && <h2>Origen: {char.origin.name}</h2>}
+{char.episode && <h2>Cantidad de episodios: {char.episode.length}</h2>}
+
+</div>
+</div>
+</div>
+)
 }
+
 export default Detail

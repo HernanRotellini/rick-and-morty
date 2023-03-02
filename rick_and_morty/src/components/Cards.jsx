@@ -1,9 +1,9 @@
 import Card from './Card';
-import s from "./cards.modules.css"
+import "./cards.modules.css"
 export default function Cards(props) {
    
    return (
-      <div className={s.fondo}>
+      <div className="cartas">
          {props.characters.map(character =>
             <Card 
                key={character.id} 

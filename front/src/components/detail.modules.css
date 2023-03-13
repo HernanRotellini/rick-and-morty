@@ -26,28 +26,38 @@
    
 }
 .datosdark{
-    
     vertical-align: auto;
     padding-left: 20px;
     margin-top: 80px;
     text-align: center;
-    
- 
 }
-.datosdark h2{
+.datosdark div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .datosdark h2 {
     color: #FFDB58;
-}
+    line-height: 2;
+    margin: 0;
+    text-align: left;
+  }
 .datos{
-    
     vertical-align: auto;
     padding-left: 20px;
     margin-top: 80px;
     text-align: center;
-    
-
 }
+.datos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 .datos h2{
     color: rgb(255, 2, 2);
+    line-height: 2;
+    margin: 0;
+    text-align: left;
 }
 
 .nohover{
@@ -67,11 +77,10 @@
     transform: translateY(0%);
 }
 .tema{
-  
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 20px;
+ 
 }
 .volver{
     text-align: center;

@@ -47,19 +47,21 @@ function Card(props) {
    return (
       
       <div >
-         
+         <div >
          {isFav ? (
-         <button onClick={handleFavorite}>❤️</button>
+         <button className={props.darkMode ? 'favsdark' : 'favslight' } onClick={handleFavorite}>{props.darkMode ? '❤️' : '💜'}</button>
       ) : (
          <button onClick={handleFavorite}>🤍</button>
       )}
-      <br /><br />
+      </div>
+      
          <button className="xbutton" onClick={handleClick}>X</button>
+      
       <Link to={`/detail/${props.id}`}>
-         <h2>{props.name}</h2>
+         <h2 className={props.darkMode ? 'dark' : 'light' }>{props.name}</h2>
          </Link>
-      <h2>{props.species}</h2>
-      <h2>{props.gender}</h2>
+      <h2 className={props.darkMode ? 'dark' : 'light' }>{props.species}</h2>
+      <h2 className={props.darkMode ? 'dark' : 'light' }>{props.gender}</h2>
       <div className="image">
         <img src={props.image} alt="" />
       </div>

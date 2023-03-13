@@ -1,5 +1,5 @@
 
-.App {
+.Appdark {
    background-image: url("https://i.postimg.cc/qRK08FB2/R-M-fondo.jpg");
    background-Size: cover;
    background-position: center;
@@ -10,7 +10,17 @@
    overflow: auto;
  
 }
-
+.App {
+   background-image: url("https://i.postimg.cc/d3RvjThp/fondo-app-claro.webp");
+   background-Size: cover;
+   background-position: center;
+   text-align: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+   resize: both;
+   overflow: auto;
+ 
+}
 .form{
    font-size: 25px;
    color: rgb(236, 176, 35);

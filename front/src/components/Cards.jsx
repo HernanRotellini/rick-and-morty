@@ -13,6 +13,7 @@ export default function Cards(props) {
                image={character.image} 
                id={character.id} 
                onClose={props.onClose}
+               darkMode={props.darkMode}
             />
          )}
       </div>

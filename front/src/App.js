@@ -13,7 +13,7 @@ import Favoritos from "./components/Favorites";
 const URL = "https://be-a-rym.up.railway.app/api";
 const APIKEY = "3681102e3393.a2e00517a5401fef1d76";
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
@@ -35,7 +35,9 @@ function App() {
   useEffect(() => {
     !access && navigate("/");
   }, [access, navigate]);
-
+  const toggle = () => {
+    setDarkMode(!darkMode)
+  };
   function onSearch(character) {
     fetch(`${URL}/character/${character.id}?key=${APIKEY}`)
       .then((response) => response.json())
@@ -62,7 +64,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route
             path="/home"
-            element={<Cards characters={characters} onClose={onClose} />}
+            element={<Cards characters={characters} onClose={onClose} darkMode={darkMode}/>}
           />
           <Route path="/detail/:detailId" element={<Detail />} />
           <Route path="/favorites" element={<Favoritos />} />
@@ -72,14 +74,16 @@ function App() {
   }
   if (location.pathname === "/") {
     return (
-      <div className="App form">
+      <div className="Appdark form">
         <h1>Bienvenido al Mundo de Rick & Morty</h1>
         <Form login={login} />
       </div>
     );
   }
   return (
-     <div className={darkMode ? "App dark" : "App"}>{renderRoutes()}</div>
+     <div className={darkMode ? "Appdark" : "App"} >
+      <span className="tema" onClick={toggle}><button >Cambiar tema</button></span>
+      {renderRoutes()}</div>
   );
 }
 

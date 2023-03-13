@@ -1,13 +1,16 @@
 import {React} from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
+import "./favorites.modules.css"
 function Favoritos(props){
 return(
-    <div>
+    <div >
         
         <Link to="/home">
-        <button>Volver</button></Link>
+        <button className='volver'>Volver</button></Link>
+        <div className='cartas'>
         {props.myFavorites.map((favorito)=>{
+           
             return(
             <div key={favorito.id}>
                 
@@ -22,9 +25,9 @@ return(
       </div>
       
 </div>)
-        })
+ })
         
-}
+}</div>
     </div>
 )
 }

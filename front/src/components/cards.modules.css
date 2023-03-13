@@ -20,12 +20,20 @@ grid-auto-flow: dense;
     width: 40px;
     height: 40px; 
     transform: translateX(-50%);
-    transform: translateY(-50%);
+    transform: translateY(0%);
 }
 
-h2{
+
+.dark{
     font-size: 25px;
     color: rgb(236, 176, 35);
+    justify-content: center;
+    text-align: center;
+
+}
+.light{
+    font-size: 25px;
+    color: #5e3a3aef;
     justify-content: center;
     text-align: center;
 
@@ -50,3 +58,4 @@ img:hover {
     justify-content: center;
     align-items: center;
   }
+  

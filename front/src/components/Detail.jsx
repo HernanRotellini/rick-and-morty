@@ -52,8 +52,8 @@ function Detail() {
           {char.species ?  <h2>Especie: {char.species}</h2>
          :  <h2>Especie: Desconocido</h2>}
           
-          {char.gender ?  <h2>Genero: {char.gender}</h2>
-         :  <h2>Genero: Prefiere no contestar</h2>}
+          {char.gender ?  <h2>Género: {char.gender}</h2>
+         :  <h2>Género: Prefiere no contestar</h2>}
          
           {char.status ? <h2>Estado: {char.status}</h2>
          : <h2>Estado: Desconocido</h2>}

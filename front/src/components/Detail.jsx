@@ -12,8 +12,8 @@ function Detail() {
     navigate("/home");
   };
   React.useEffect(() => {
-     fetch(`https://be-a-rym.up.railway.app/api/character/${detailId}?key=3681102e3393.a2e00517a5401fef1d76`)
-    //fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
+    // fetch(`https://be-a-rym.up.railway.app/api/character/${detailId}?key=3681102e3393.a2e00517a5401fef1d76`)
+    fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.id) {
@@ -41,10 +41,10 @@ function Detail() {
           <h2>Especie: {char.species}</h2>
           <h2>Genero: {char.gender}</h2>
           <h2>Estado: {char.status}</h2>
-          {char.origin && <h2>Origen: {char.origin.name}</h2>}
+         {/* {char.origin && <h2>Origen: {char.origin.name}</h2>}
           {char.episode && (
             <h2>Cantidad de episodios: {char.episode.length}</h2>
-          )}
+          )} */}
         </div>
       </div>
     </div>

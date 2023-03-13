@@ -19,9 +19,9 @@ server.post("/rickandmorty/fav/", (req, res) => {
 server.get("/rickandmorty/fav/", (req, res) => {
   return res.json(200, { favoritos });
 });
-server.get("/rickandmorty/detail/:detailId", (req, res) => {
-  const { detailId } = req.params;
-  let detalle = characters.filter((fav) => fav.id === Number(detailId));
+server.get("/rickandmorty/detail/:id", (req, res) => {
+  const { id } = req.params;
+  const detalle = characters.find((fav) => fav.id === Number(id));
   return res.json(200, detalle);
 });
 server.delete("/rickandmorty/fav/:id", (req, res) => {

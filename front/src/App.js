@@ -13,6 +13,7 @@ import Favoritos from "./components/Favorites";
 const URL = "https://be-a-rym.up.railway.app/api";
 const APIKEY = "3681102e3393.a2e00517a5401fef1d76";
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
@@ -51,7 +52,24 @@ function App() {
         }
       });
   }
-
+  const showNav = location.pathname === "/about" || location.pathname === "/home";
+  function renderRoutes() {
+    return (
+      <>
+      {showNav && <Nav onSearch={onSearch}/>}
+        
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/home"
+            element={<Cards characters={characters} onClose={onClose} />}
+          />
+          <Route path="/detail/:detailId" element={<Detail />} />
+          <Route path="/favorites" element={<Favoritos />} />
+        </Routes>
+      </>
+    );
+  }
   if (location.pathname === "/") {
     return (
       <div className="App form">
@@ -61,24 +79,7 @@ function App() {
     );
   }
   return (
-    <div className="App">
-      <Nav onSearch={onSearch} />
-
-      <Routes>
-        <Route exact path="/about" element={<About />} />
-        <Route
-          className="carta"
-          path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
-        ></Route>
-        <Route
-          className="detail"
-          path="/detail/:detailId"
-          element={<Detail />}
-        />
-        <Route path="/favorites" element={<Favoritos />} />
-      </Routes>
-    </div>
+     <div className={darkMode ? "App dark" : "App"}>{renderRoutes()}</div>
   );
 }
 

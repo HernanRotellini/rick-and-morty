@@ -23,13 +23,4 @@
    justify-content: center;
    text-align: center;
 }
-.detail{
-   background-image: url("https://i.postimg.cc/brctN89d/R-M-fondo-detalle.jpg");
-   background-Size: cover;
-  background-position: center;
-  text-align: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  resize: both;
-  overflow: auto;
-}
+

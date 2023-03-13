@@ -1,5 +1,15 @@
-.fondo {
-    background-image: url("https://i.postimg.cc/brctN89d/R-M-fondo-detalle.jpg");
+.fondodark {
+    background-image: url("https://i.postimg.cc/4ddyt44v/fondo-detalle.png");
+    background-Size: cover;
+   background-position: center;
+   text-align: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+   resize: both;
+   overflow: auto;
+}
+.fondo{
+    background-image: url("https://i.postimg.cc/dtqCtFrB/fondo-detalle-claro.jpg");
     background-Size: cover;
    background-position: center;
    text-align: center;
@@ -12,23 +22,57 @@
    
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 80px;
    
 }
-.datos{
+.datosdark{
+    
     vertical-align: auto;
     padding-left: 20px;
+    margin-top: 80px;
+    text-align: center;
+    
+ 
 }
+.datosdark h2{
+    color: #FFDB58;
+}
+.datos{
+    
+    vertical-align: auto;
+    padding-left: 20px;
+    margin-top: 80px;
+    text-align: center;
+    
+
+}
+.datos h2{
+    color: rgb(255, 2, 2);
+}
+
 .nohover{
-    height: 350px;
-    width: 350px;
+    height: 500px;
+    width: 500px;
+    margin-right: 100px;
+    
     position: relative;
-    margin-right: 50px;
+    
     
 }
 .nohover:hover{
-    height: 350px;
-    width: 350px;
+    height: 500px;
+    width: 500px;
+    margin-right: 100px;
     transform: translateX(0%);
     transform: translateY(0%);
+}
+.tema{
+  
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+}
+.volver{
+    text-align: center;
 }

@@ -67,7 +67,7 @@ function App() {
             element={<Cards characters={characters} onClose={onClose} darkMode={darkMode}/>}
           />
           <Route path="/detail/:detailId" element={<Detail />} />
-          <Route path="/favorites" element={<Favoritos />} />
+          <Route path="/favorites" element={<Favoritos darkMode={darkMode}/>} />
         </Routes>
       </>
     );
@@ -82,7 +82,7 @@ function App() {
   }
   return (
      <div className={darkMode ? "Appdark" : "App"} >
-      <span className="tema" onClick={toggle}><button >Cambiar tema</button></span>
+      <span className="tema" onClick={toggle}><button >{darkMode ? "Modo claro" : "Modo oscuro"}</button></span>
       {renderRoutes()}</div>
   );
 }

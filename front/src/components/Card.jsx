@@ -49,7 +49,7 @@ function Card(props) {
       <div >
          <div >
          {isFav ? (
-         <button className={props.darkMode ? 'favsdark' : 'favslight' } onClick={handleFavorite}>{props.darkMode ? '❤️' : '💜'}</button>
+         <button  onClick={handleFavorite}>{props.darkMode ? '❤️' : '💜'}</button>
       ) : (
          <button onClick={handleFavorite}>🤍</button>
       )}

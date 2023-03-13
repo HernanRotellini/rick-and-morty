@@ -7,6 +7,35 @@
     grid-auto-rows: 22rem;
     grid-auto-flow: dense;   
     }
+.favsdark{
+    font-size: 25px;
+    color: rgb(236, 176, 35);
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2em;
+
+}
+.linkdark{
+    font-size: 25px;
+    color: rgb(255, 179, 2);
+    justify-content: center;
+    text-align: center;
+}
+
+.favslight{
+    font-size: 25px;
+    color: #5e3a3aef;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2em;
+}
+.linklight{
+    font-size: 25px;
+    color: #5e3a3aef;
+    justify-content: center;
+    text-align: center;
+}
 .volver{
+
     justify-content: center;
 }

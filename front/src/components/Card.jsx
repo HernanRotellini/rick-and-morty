@@ -13,12 +13,12 @@ function Card(props) {
 
   useEffect(() => {
     // Cargar favoritos desde el almacenamiento local
-    const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
+   // const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
 
     // Verificar si este personaje está en la lista de favoritos
-    const found = storedFavs.some((fav) => fav.id === props.id);
+   // const found = storedFavs.some((fav) => fav.id === props.id);
 
-    setFav(found);
+    //setFav(found);
   }, [props.id]);
 
   const handleFavorite = () => {
@@ -27,21 +27,21 @@ function Card(props) {
       props.deleteFavorite(props.id);
 
       // Actualizar la lista de favoritos en el almacenamiento local
-      const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
-      const updatedFavs = storedFavs.filter((fav) => fav.id !== props.id);
-      localStorage.setItem("favorites", JSON.stringify(updatedFavs));
+      //const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
+     // const updatedFavs = storedFavs.filter((fav) => fav.id !== props.id);
+     // localStorage.setItem("favorites", JSON.stringify(updatedFavs));
 
-      setFav(false);
+     // setFav(false);
     } else {
       // Agregar a favoritos
-      props.addFavorite(props);
+    //  props.addFavorite(props);
 
       // Actualizar la lista de favoritos en el almacenamiento local
-      const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
-      const updatedFavs = [...storedFavs, props];
-      localStorage.setItem("favorites", JSON.stringify(updatedFavs));
+     // const storedFavs = JSON.parse(localStorage.getItem("favorites")) || [];
+     // const updatedFavs = [...storedFavs, props];
+     // localStorage.setItem("favorites", JSON.stringify(updatedFavs));
 
-      setFav(true);
+      //setFav(true);
     }
   };
    return (

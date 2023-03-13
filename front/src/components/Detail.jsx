@@ -4,7 +4,7 @@ import { useParams,useNavigate} from "react-router-dom";
 import React from "react"
 function Detail(){
 const [char, setChar] = React.useState({})
-const {detailId}=useParams();
+const {detailId}= useParams();
 
 const navigate = useNavigate();
 

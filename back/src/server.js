@@ -1,5 +1,6 @@
 const {router} = require("./routes/index")
 let {favoritos} = require("./utils/favs")
+let {characters}= require("./utils/data")
 const express = require('express');
 const cors = require("cors");
 const server = express();
@@ -21,16 +22,17 @@ server.get("/rickandmorty/fav/" ,(req,res)=>{
        return res.json(200,{favoritos})
     
 })
-server.get("/rickandmorty/detail/:id" ,(req,res)=>{
-    
-       return res.json(200,{favoritos})
+server.get("/rickandmorty/detail/:detailId" ,(req,res)=>{
+       const {detailId}= req.params
+       let detalle = characters.filter((fav)=> fav.id === Number(detailId))
+       return res.json(200,detalle)
    
 })
 server.delete("/rickandmorty/fav/:id",(req,res)=>{
     let {id} = req.params
     
         favoritos = favoritos.filter((fav)=> fav.id !== Number(id))
-       return res.json(200,{favoritos:favoritos})
+       return res.json(200,favoritos)
     
  
 })

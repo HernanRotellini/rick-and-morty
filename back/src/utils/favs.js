@@ -1,3 +1,3 @@
-let favoritos =[]
+const favoritos =[]
 
 module.exports = {favoritos};

@@ -12,11 +12,12 @@ const volver = ()=>{
     navigate("/home")
 }
 React.useEffect(() => {
-    fetch(`https://be-a-rym.up.railway.app/api/character/${detailId}?key=3681102e3393.a2e00517a5401fef1d76`)
+  //  fetch(`https://be-a-rym.up.railway.app/api/character/${detailId}?key=3681102e3393.a2e00517a5401fef1d76`)
+  fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
       .then((response) => response.json())
       .then((char) => {
         if (char.id) {
-          setChar(char);
+         return setChar(char);
         } else {
           window.alert("No hay personajes con ese ID");
         }

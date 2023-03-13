@@ -1,6 +1,6 @@
 import { DELETE_FAVORITE,ADD_FAVORITE } from "./actionstype";
 
-const initialState={
+let initialState={
     myFavorites: [],
 
 }

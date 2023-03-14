@@ -16,7 +16,7 @@ server.listen(PORT, () => {
 
 server.post("/rickandmorty/fav/", (req, res) => {
   favoritos.push(req.body);
-  return res.json(200, { success: "funciono perfecto" });
+  return res.json(200, { success: "funciono bien" });
 });
 server.get("/rickandmorty/fav/", (req, res) => {
   return res.json(200, { favoritos });
@@ -32,7 +32,7 @@ server.get("/rickandmorty/onsearch/:id", (req, res) => {
   return res.json(200, detalle);
 });
 server.delete("/rickandmorty/fav/:id", (req, res) => {
-  let { id } = req.params;
+  const { id } = req.params;
 
   favoritos = favoritos.filter((fav) => fav.id !== Number(id));
   return res.json(200, favoritos);

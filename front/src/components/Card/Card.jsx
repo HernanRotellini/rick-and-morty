@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteFavorite, addFavorite } from "../redux/actions";
+import { deleteFavorite, addFavorite } from "../../redux/actions";
 import { useEffect } from "react";
 
 function Card(props) {

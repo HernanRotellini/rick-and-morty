@@ -26,6 +26,11 @@ server.get("/rickandmorty/detail/:id", (req, res) => {
   const detalle = characters.find((fav) => fav.id === Number(id));
   return res.json(200, detalle);
 });
+server.get("/rickandmorty/onsearch/:id", (req, res) => {
+  const { id } = req.params;
+  const detalle = characters.find((fav) => fav.id === Number(id));
+  return res.json(200, detalle);
+});
 server.delete("/rickandmorty/fav/:id", (req, res) => {
   let { id } = req.params;
 

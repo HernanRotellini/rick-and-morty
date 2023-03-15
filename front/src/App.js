@@ -10,8 +10,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Favoritos from "./components/Favorites/Favorites.jsx";
 
-// const URL = "https://be-a-rym.up.railway.app/api";
-// const APIKEY = "3681102e3393.a2e00517a5401fef1d76";
+const URL = "https://be-a-rym.up.railway.app/api";
+ const APIKEY = "3681102e3393.a2e00517a5401fef1d76";
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const location = useLocation();
@@ -39,8 +39,8 @@ function App() {
     setDarkMode(!darkMode)
   };
   function onSearch(character) {
-   // fetch(`${URL}/character/${character.id}?key=${APIKEY}`)
-    fetch(`http://localhost:3001/rickandmorty/onsearch/${character.id}`)
+   fetch(`${URL}/character/${character.id}?key=${APIKEY}`)
+    //fetch(`http://localhost:3001/rickandmorty/onsearch/${character.id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.id) {

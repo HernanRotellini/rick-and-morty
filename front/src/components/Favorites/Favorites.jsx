@@ -2,7 +2,19 @@ import {React} from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import "./favorites.modules.css"
+import { useEffect } from 'react';
+import { orderCards,filterCards } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
+
 function Favoritos(props){
+  const dispatch = useDispatch()
+//   useEffect(()=>{
+//     return (
+//       dispatch(orderCards('Ascendente')),
+//       ()=>{ dispatch(filterCards('none'))
+//     dispatch(orderCards('Ascendente'));
+//     })   
+// })
     return (
         <div>
           <Link to="/home">

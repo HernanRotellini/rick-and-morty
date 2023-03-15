@@ -1,4 +1,4 @@
-import { DELETE_FAVORITE, ADD_FAVORITE } from "./actionstype";
+import { DELETE_FAVORITE, ADD_FAVORITE, FILTER, ORDER } from "./actionstype";
 
 export const deleteFavorite = (id) => {
     return async (dispatch) => {
@@ -38,6 +38,11 @@ export const addFavorite = (character) => {
   };
 };
 
-
+export const filterCards = (gender)=>{
+return {type: FILTER, payload: gender}
+}
+export const orderCards = (id)=>{
+  return {type: ORDER, payload: id}
+  }
 
 

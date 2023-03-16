@@ -32,15 +32,15 @@ const handleFilterChange = (e) => {
           </Link>
           <div className="cartas">
           <div>
-        <label htmlFor="order">Ordenar por:</label>
-        <select name="order" id="order" onChange={handleOrderChange}>
+        <label className='filter' htmlFor="order">Ordenar por:</label>
+        <select className='filter' name="order" id="order" onChange={handleOrderChange}>
           <option value="Ascendente">Ascendente</option>
           <option value="Descendente">Descendente</option>
         </select>
       </div>
       <div>
-        <label htmlFor="filter">Filtrar por:</label>
-        <select name="filter" id="filter" onChange={handleFilterChange}>
+        <label className='filter' htmlFor="filter">Filtrar por:</label>
+        <select className='filter' name="filter" id="filter" onChange={handleFilterChange}>
           <option value="none">Todos</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>

@@ -39,3 +39,23 @@
 
     justify-content: center;
 }
+
+.filter{
+    display: block;
+    margin-left: 50%;
+    
+    font-size: 20px;
+    color: rgb(255, 179, 2);
+    justify-content: center;
+    text-align: center;
+    border: 10px;
+    border-radius: 10px;
+    background-color: black;
+    
+}
+label{
+    font-size: 25px;
+    color: rgb(255, 179, 2);
+    justify-content: center;
+    align-items: center;
+}

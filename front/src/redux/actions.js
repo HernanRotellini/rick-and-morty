@@ -1,4 +1,4 @@
-import { DELETE_FAVORITE, ADD_FAVORITE, FILTER, ORDER } from "./actionstype";
+import { DELETE_FAVORITE, ADD_FAVORITE, FILTER, ORDER,GET_ALL_FAVS } from "./actionstype";
 
 export const deleteFavorite = (id) => {
     return async (dispatch) => {
@@ -10,7 +10,7 @@ export const deleteFavorite = (id) => {
           }
         );
         if (response.ok) {
-          const data = await response.json();
+         
           dispatch({ type: DELETE_FAVORITE, payload: id });
         } else {
           console.error("Error eliminando favorito");
@@ -23,14 +23,14 @@ export const deleteFavorite = (id) => {
 export const addFavorite = (character) => {
   return async (dispatch) => {
     try {
-      const response = await fetch("http://localhost:3001/rickandmorty/fav", {
+       await fetch("http://localhost:3001/rickandmorty/fav", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(character),
       });
-      const data = await response.json();
+      
       dispatch({ type: ADD_FAVORITE, payload: character });
     } catch (error) {
       console.error(error);
@@ -41,8 +41,11 @@ export const addFavorite = (character) => {
 export const filterCards = (gender)=>{
 return {type: FILTER, payload: gender}
 }
-export const orderCards = (id)=>{
-  return {type: ORDER, payload: id}
+export const orderCards = (order)=>{
+  return {type: ORDER, payload: order}
   }
+  export const getAllFavorites = ()=>{
+    return {type: GET_ALL_FAVS}
+    }
 
 

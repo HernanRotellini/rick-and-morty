@@ -31,16 +31,15 @@ const handleFilterChange = (e) => {
             <button className="volver">Volver</button>
           </Link>
           <div className="cartas">
-          <div>
+          <div className='filtros'>
         <label className='filter' htmlFor="order">Ordenar por:</label>
         <select className='filter' name="order" id="order" onChange={handleOrderChange}>
           <option value="Ascendente">Ascendente</option>
           <option value="Descendente">Descendente</option>
         </select>
-      </div>
-      <div>
+      
         <label className='filter' htmlFor="filter">Filtrar por:</label>
-        <select className='filter' name="filter" id="filter" onChange={handleFilterChange}>
+       <select className='filter' name="filter" id="filter" onChange={handleFilterChange}>
           <option value="none">Todos</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -48,6 +47,7 @@ const handleFilterChange = (e) => {
           <option value="unknown">Desconocido</option>
         </select>
       </div>
+     
             {props.myFavorites.map((favorito) => {
               return (
                 <div key={favorito.id} className={props.darkMode ? 'favsdark' : 'favslight' }>
